@@ -1,0 +1,22 @@
+
+VARIABLES
+_____________________
+Una variable es una especie de contenedor que almacena un valor para usarse en algún momento.
+
+STRINGS
+_____________________
+Es un bloque de texto
+
+FUNCIONES
+_____________________
+Una función es un objeto invocable que ejecuta una serie de instrucciones y por lo general retorna un valor.
+Puede aceptar argumentos. 
+
+DECLARACIONES IF
+_____________________
+Son expresiones para controlar el flujo. Verifican si una condición se comple.
+Si se cumple, el programa ejecuta ciertas instrucciones.
+
+VALORES BOOLEANOS
+_____________________
+Valores que únicmaente son verdadero o falso.

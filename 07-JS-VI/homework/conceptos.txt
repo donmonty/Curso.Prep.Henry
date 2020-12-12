@@ -1,0 +1,2 @@
+Funciones Callback:
+Un Callback es una función que deberá ejecutarse en el momento en que otra función termine de hacerlo.

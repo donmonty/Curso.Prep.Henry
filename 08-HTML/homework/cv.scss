@@ -1,0 +1,302 @@
+// Variables
+$font-stack: Inter, Arial, Helvetica, sans-serif;
+$gray-900: #111827;
+$gray-700: #374151;
+$gray-500: #6B7280;
+$gray-300: #D1D5DB;
+$gray-200: #E5E7EB;
+$white: #fff; 
+
+
+// Mixins
+@mixin text-2xl($color) {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+@mixin text-3xl($color) {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+@mixin text-lg($color) {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+@mixin text-base($color) {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+@mixin text-sm($color) {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+@mixin lateral-margins {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+@mixin org-icon {
+  min-width: 60px;
+  height: 60px;
+  background-color: $gray-500;
+  margin-right: 24px;
+  border-radius: 4px;
+  background-image: url("../logo-nubebar.png");
+  background-size: cover;
+}
+
+@mixin content-box($color, $padding, $border-radius, $margin-lat, $margin-b) {
+  background-color: $color;
+  padding: $padding;
+  border-radius: $border-radius;
+  margin-left: $margin-lat;
+  margin-right: $margin-lat;
+  margin-bottom: $margin-b;
+}
+
+//// Globals
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $gray-200;
+  font-family: $font-stack;
+}
+
+.divider {
+  width: 100%;
+  border-top: solid 1px $gray-300;
+  margin-bottom: 40px;
+}
+
+
+
+///////////////////////////////////
+
+.container {
+  max-width: 900px;
+  height: 100vh;
+  padding: 20px 0;
+  margin: 0 auto;
+  background-color: $gray-200;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  position: relative;
+  margin-bottom: 20px;
+  @include lateral-margins();
+
+  &__mugshot {
+    position: absolute;
+    top: 110px;
+    left: 40px;
+    width: 120px;
+    height: 120px;
+    z-index: 10;
+    border: solid 4px white;
+    border-radius: 50%;
+    background-image: url('../avatar-monty.jpg');
+    background-size: contain;
+    box-shadow: 0px 0px 31px 0px rgba(104,104,104,0.63);
+  }
+
+  &__wallpaper {
+    height: 180px;
+    background-image: url('../abstract-bg.jpg');
+    background-size: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  &__contents {
+    padding: 70px 40px 40px 40px;
+    background-color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; 
+
+    h3 {
+      @include text-3xl($gray-900);
+    }
+
+    h6 {
+      @include text-base($gray-900);
+    }
+
+    p {
+      @include text-sm($gray-900);
+    }
+  }
+}
+
+.experience {
+  @include content-box($white, 40px, 10px, 16px, 20px);
+
+  &__title {
+    @include text-2xl($gray-900);
+    margin-bottom: 40px;
+  }
+}
+
+.job {
+  display: flex;
+  justify-content: space-between;
+
+  &__icon {
+    min-width: 60px;
+    height: 60px;
+    background-color: $gray-500;
+    margin-right: 24px;
+    border-radius: 4px;
+  }
+
+  &__title {
+    @include text-lg($gray-900);
+  }
+
+  &__org {
+    font-weight: 500;
+    margin-bottom: 6px;
+    @include text-base($gray-500);
+  }
+
+  &__date {
+    font-weight: 400;
+    @include text-sm($gray-300);
+  }
+
+  &__description {
+    @include text-base($gray-500);
+    margin: 20px 0;
+  }
+}
+
+////////////////////////////////////
+
+.regular {
+  @include content-box($white, 40px, 10px, 16px, 20px);
+
+  &__title {
+    @include text-2xl($gray-900);
+    margin-bottom: 40px;
+  }
+
+  &__description {
+    @include text-base($gray-500);
+    margin: 20px 0;
+
+  }
+}
+
+.skills {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  &__title {
+    @include text-lg($gray-900);
+    margin-right: 16px;
+  }
+
+  &__list {
+    display: flex;
+    list-style: none;
+  }
+
+  &__item {
+    margin-left: 16px;
+    @include text-sm($gray-300);
+    font-weight: 600;
+  }
+}
+
+
+/////////////////////////////////////
+
+.org-icon {
+  min-width: 60px;
+  height: 60px;
+  background-color: $gray-500;
+  margin-right: 24px;
+  border-radius: 4px;
+}
+
+
+.education {
+  display: flex;
+  justify-content: start;  
+
+  &__title {
+    @include text-lg($gray-900);
+  }
+
+  &__org {
+    font-weight: 500;
+    margin-bottom: 6px;
+    @include text-base($gray-500);
+  }
+
+  &__date {
+    font-weight: 400;
+    @include text-sm($gray-300);
+  }
+}
+
+
+///////////// mobile
+@media(max-width: 700px) {
+  .job {
+    flex-direction: column;
+
+    &__description {
+      @include text-sm($gray-500);
+      margin: 20px 0;
+  }
+}
+
+.regular {
+  &__description {
+    @include text-sm($gray-500);
+    margin: 20px 0;
+  }
+}
+
+.profile {
+  &__mugshot {
+    top: 44%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  &__title {
+    margin-bottom: 1rem;
+  }
+
+  &__list {
+    flex-direction: column;
+  }
+
+  &__item {
+    margin-left: 0;
+    margin-bottom: 4px;
+  }
+}
+
+}

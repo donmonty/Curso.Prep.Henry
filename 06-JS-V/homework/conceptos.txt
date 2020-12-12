@@ -1,0 +1,7 @@
+Prototype:
+Todos los objetos de Javascript heredan sus propiedades comunes de otro objeto. Ese objeto es su prototype. Por lo tanto, el prototype de un objecto es el que contiene las propiedades que comparten todos sus descendientes.
+
+Un protototype seria el objeto Automóvil, que tiene 4 ruedas y un chasis.
+Un descendiente sería un auto deportivo, con el agregado de un motor potente.
+Otro descendiente sería un auto eléctrico, con el agregado de un motor eléctrico. Ambos descendientes comparten las 4 ruedas y el chasis, pero tienen propiedades adicionales que no forman parte del prototype.
+

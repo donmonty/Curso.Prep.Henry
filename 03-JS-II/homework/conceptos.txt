@@ -1,0 +1,32 @@
+
+for
+--------------
+Lo usamos para ejecutar un bloque de codigo un numero determinado de veces. El número de veces que se ejecutará depende de una serie de condiciones que deben cumplirse.
+
+Consideremos este ejemplo:
+
+const cantidad = 2;
+
+for (i = 0; i < cantidad; i++) {
+  console.log('Ejecucion numero: ', i);
+}
+
+// Resultado:
+Ejecucion numero: 0
+Ejecucion numero: 1
+
+
+En este caso el bloque de código se ejecutará siempre y cuando la variable i sea menor a cantidad, comenzando con i=0. Como i=0 y 0 es menor a cantidad, el bloque se ejecuta una primera vez. La segunda vuelta, i=1 y 1 es menor a cantidad tambien, asi que el bloque se ejecuta de nuevo. Pero la tercera vuelta i=2 y 2 no es menor a cantidad, asi que el bucle termina.
+
+
+&&
+------------------
+Compara dos expresiones. Arroja true si ambas expresiones son verdaderas.
+
+||
+-------------------
+Compara dos expresiones. Arroja true si una de ellas es verdadera.
+
+!
+-------------------
+El valor contrario de una expresion.

@@ -1,0 +1,16 @@
+Objeto: 
+Es una entidad que tiene propiedades y metodos.
+
+Propiedades:
+La propiedad de un objeto es una variable que puede almacenar cualquier tipo de objeto. Una propiedad consta de una key y un value.La key es el nombre o referencia de la propiedad y value es su contenido.
+
+Métodos:
+Cuando la propiedad de un objeto almacena una función, entonces decimos que es un método.
+
+Bucle for...in:
+Estos bucles nos permiten iterar por las propiedades de un objeto.
+
+Notación de puntos vs notación de corchetes:
+Ambos sirven para referenciar las propiedades de un objeto. Sin embargo la notación de corchetes es la úniac que nos permite hacerlo de forma dinámica.
+
+

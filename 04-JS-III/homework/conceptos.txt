@@ -1,0 +1,4 @@
+
+Qué es un Array?
+
+Un array es una variable que te permite almacenar una colección de objetos o variables.
